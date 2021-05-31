@@ -18,7 +18,8 @@ class LoginOrRegister():
         self.create_register_screen()
         
 
-
+        
+        
     #Display the buttons which can be selected
     def create_register_screen(self):
         
