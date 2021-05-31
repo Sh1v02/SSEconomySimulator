@@ -88,9 +88,6 @@ account when evaluating your decisions.
         newvalue = slider.get()
         self.CheckConfirmChanges(newvalue, self.IncomeT)
 
-        #economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
-        #mycursor = economygamedb.cursor()
-
         
 
     def view_expectedchanges(self, slider):

@@ -1,6 +1,6 @@
 import mysql.connector
 
-economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
 
 mycursor = economygamedb.cursor()
 

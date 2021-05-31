@@ -84,7 +84,7 @@ class login():
         
         
         #Connect to the database
-        gamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database = "economygame") #Connect to MySQL
+        gamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database = "economygame") #Connect to MySQL
         mycursor = gamedb.cursor()
 
         #Check if their username and hashed values are in the database and if they match
@@ -277,7 +277,7 @@ class register():
         
         print(valueoffirsthash, valueofsecondhash)
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database = "economygame") #Connect to MySQL
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database = "economygame") #Connect to MySQL
         mycursor = economygamedb.cursor()
 
         #Check if a row has the same two hash values
@@ -358,7 +358,7 @@ class CorrectDetails():
         print(difficulty)
         print(self.UserID, " self.UserID")
         
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database = "economygame") #Connect to MySQL
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database = "economygame") #Connect to MySQL
         mycursor = economygamedb.cursor()
 
         #Check if a row has the same two hash values

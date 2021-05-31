@@ -379,7 +379,7 @@ class Election(MainMenu.menu_main):
 
             print("losechance: ", losechance, " is less than ChanceOfLosing: ", ChanceOfLosing, " therefore the User has won the election")
 
-            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
             mycursor = economygamedb.cursor()
 
             NationalDebt, CurrentAccount, UnemploymentRate, InflationRate, GDP, Year = self.LoadStatistics()
@@ -400,7 +400,7 @@ class Election(MainMenu.menu_main):
 
     def EndSimulator(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SET FOREIGN_KEY_CHECKS=0")

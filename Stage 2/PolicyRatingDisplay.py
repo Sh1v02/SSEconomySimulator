@@ -596,15 +596,7 @@ confirm changes"""
                 
         print("new policies confirmed are: ",policiesconfirmed)
 
-        OtherStatements.addPoliciesConfirmed(policiesconfirmed)
-        #policiesconfirmed['AWESOME'] = 2
-        #economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
-        #mycursor = economygamedb.cursor()
-        #updatepoliciesconfirmed = "UPDATE PoliciesConfirmed SET Changes = (%s) WHERE ConfirmedID = (%s)"
-        #policiesconfirmed_string = json.dumps(policiesconfirmed)    #Convert to string to enter it into database.
-        #mycursor.execute(updatepoliciesconfirmed, (policiesconfirmed_string, self.UserID))  #Update the column which shows the changes with the User's ID.
-        #economygamedb.commit()
-        
+        OtherStatements.addPoliciesConfirmed(policiesconfirmed)        
         
         
     

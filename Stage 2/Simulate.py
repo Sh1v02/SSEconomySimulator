@@ -225,7 +225,7 @@ simulate the economy"""
 
 
 
-            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
             mycursor = economygamedb.cursor()
             updatestats = ("""UPDATE Statistics SET Year = %s WHERE StatsID = %s""")
             statstoupdate = (Year[0], self.UserID)
@@ -557,7 +557,7 @@ simulate the economy"""
                 self.CouncilHousing = newvalue
 
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         updateratings = ("""UPDATE Ratings SET HighIncome = %s,

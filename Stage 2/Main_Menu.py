@@ -52,7 +52,7 @@ class NewOrContinue():
         else:   #This is a newgame so start one with new stats etc...
             print("there is no data")
 
-            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
             mycursor = economygamedb.cursor()
 
             
@@ -168,7 +168,7 @@ class New_Game():
 
 
         #Insert these new values into the database
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         addratings = ("INSERT INTO Ratings(RatingsID, HighIncome, MiddleIncome, LowIncome, Pensioners, Unemployed, Businesses, Overall) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)")
         ratingstoadd = (self.UserID, HighIncomeRating, MiddleIncomeRating, LowIncomeRating, PensionersRating, UnemployedRating, BusinessRating, OverallRating)
@@ -245,7 +245,7 @@ class New_Game():
         print("National Debt as a % of GDP: ", NationalDebt)
         
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         addstats = ("INSERT INTO Statistics(StatsID, NationalDebt, CurrentAccount, UnemploymentRate, InflationRate, GDP, Year) VALUES (%s, %s, %s, %s, %s, %s, %s)")
         statstoadd = (self.UserID, NationalDebt, CurrentAccount, UnemploymentRate, InflationRate, GDP, '2020-01-01')    #Always starts at the end of 2019/ beginning of 2020
@@ -291,7 +291,7 @@ class New_Game():
 
         print("Interest Rates are: ", InterRate, " %")
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         addinterestrate = ("INSERT INTO MonetaryPolicies(MonetaryID, InterestRate) VALUES (%s, %s)")
         interestratetoadd = (self.UserID, InterRate)
@@ -403,7 +403,7 @@ class New_Game():
             
         print(IncomeT, ExciseD, NationalI, CorpT, VAT, CarbonT)
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         addtaxes = ("INSERT INTO FiscalTaxes(TaxesID, IncomeTax, ExciseDuty, NationalInsurance, CorporationTax, VAT, CarbonTax) VALUES (%s, %s, %s, %s, %s, %s, %s)")
         taxestoadd = (self.UserID, IncomeT, ExciseD, NationalI, CorpT, VAT, CarbonT)
@@ -490,7 +490,7 @@ class New_Game():
         self.GovernmentSpending += SocialProt + HealthS + EducationS + DefenceS
 
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         addfiscalspending = ("INSERT INTO FiscalSpending(SpendingID, SocialProtection, Health, Education, Defence) VALUES (%s, %s, %s, %s, %s)")
         fiscalspendingtoadd = (self.UserID, SocialProt, HealthS, EducationS, DefenceS)
@@ -510,7 +510,7 @@ class New_Game():
         ND, CA, UR, InfRate, GDP, Year = getratings.LoadStatistics()
 
         
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         calcspentsofar = """SELECT SUM(SocialProtection+Health+Education+Defence) FROM FiscalSpending WHERE SpendingID = %s"""  #Used the aggregate function SUM to calculate spending so far
         usethisID = self.UserID
@@ -597,7 +597,7 @@ class New_Game():
         self.GovernmentSpending += PubInv + WelfareB + VocationalT + CouncilH
         print(self.GovernmentSpending)
     
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         addsupplyside = ("INSERT INTO SupplySidePolicies(SupplySideID, PublicSectorInvestment, WelfareBenefits, VocationalTraining, CouncilHousing) VALUES (%s, %s, %s, %s, %s)")
         supplysidetoadd = (self.UserID, PubInv, WelfareB, VocationalT, CouncilH)
@@ -774,7 +774,7 @@ class New_Game():
         BudgetBalance = TaxRevenue - self.GovernmentSpending
         print("Budget Balance is: ", BudgetBalance)
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         addextrastats = ("INSERT INTO ExtraStatistics(ExtraStatsID, BudgetBalance, CurrencyValue, TaxRevenue, GovernmentSpending, DisposableIncome, MPC, Imports, Exports) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)")
         extrastatstoadd = (self.UserID, BudgetBalance, CurrencyValue, TaxRevenue, self.GovernmentSpending, DisposableI, MPC, Imports, Exports)
@@ -1057,7 +1057,7 @@ Policies Confirmed""",
 
         print("Changes are: ", policiesconfirmed_string, " Q2 Changes are: ", Q2Changes_string, " Q3 Changes are: ", Q3Changes_string, " Time Lagged are: ", TimeLagged_string)
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         updatepoliciesconfirmed = ("""UPDATE PoliciesConfirmed SET Changes = %s,
                                                                 Q2Changes = %s,
@@ -1565,7 +1565,7 @@ responsible for your economy for:  """ + str(monthsInCharge) + """ months.
 
             print("winchance: ", losechance, " is less than ChanceOfLosing: ", MinimumToLose, " therefore the User has won the election")
 
-            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+            economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
             mycursor = economygamedb.cursor()
 
             NationalDebt, CurrentAccount, UnemploymentRate, InflationRate, GDP, Year = self.LoadStatistics()
@@ -1587,7 +1587,7 @@ been in charge for """ + str(monthsInCharge) + """ months now!
 
     def EndSimulator(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
         mycursor.execute("SET FOREIGN_KEY_CHECKS=0")
         resetratings = "DELETE FROM Ratings WHERE RatingsID = (%s)"            

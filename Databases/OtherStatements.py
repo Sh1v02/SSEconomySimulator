@@ -6,7 +6,7 @@ from tkinter import *
 
 import importlib #Import the import functions which include the .reload() function (used if the user loses)
 
-economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
 mycursor = economygamedb.cursor()
 
 

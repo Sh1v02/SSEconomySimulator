@@ -9,7 +9,7 @@ class Load():
 
     def LoadRatings(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT HighIncome FROM Ratings WHERE RatingsID = %s"%(self.UserID))
@@ -94,7 +94,7 @@ class Load():
 
     def LoadStatistics(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT NationalDebt FROM Statistics WHERE StatsID = %s"%(self.UserID))
@@ -120,7 +120,7 @@ class Load():
 
     def LoadInterestRates(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT InterestRate FROM MonetaryPolicies WHERE MonetaryID = %s"%(self.UserID))
@@ -133,7 +133,7 @@ class Load():
 
     def LoadFiscalTaxes(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT IncomeTax FROM FiscalTaxes WHERE TaxesID = %s"%(self.UserID))
@@ -161,7 +161,7 @@ class Load():
 
     def LoadFiscalSpending(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT SocialProtection FROM FiscalSpending WHERE SpendingID = %s"%(self.UserID))
@@ -184,7 +184,7 @@ class Load():
 
     def LoadSSPolicies(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT PublicSectorInvestment FROM SupplySidePolicies WHERE SupplySideID = %s"%(self.UserID))
@@ -205,7 +205,7 @@ class Load():
 
     def LoadExtraStatistics(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT BudgetBalance FROM ExtraStatistics WHERE ExtraStatsID = %s"%(self.UserID))
@@ -239,7 +239,7 @@ class Load():
 
     def LoadPreviousGDP(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT LastElectionGDP FROM GDPStatistics WHERE GDPID = %s"%(self.UserID))
@@ -255,7 +255,7 @@ class Load():
         
     def LoadPoliciesConfirmed(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT Changes FROM PoliciesConfirmed WHERE ConfirmedID = %s"%(self.UserID))
@@ -271,7 +271,7 @@ class Load():
 
     def LoadQ2PoliciesConfirmed(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT Q2Changes FROM PoliciesConfirmed WHERE ConfirmedID = %s"%(self.UserID))
@@ -285,7 +285,7 @@ class Load():
 
     def LoadQ3PoliciesConfirmed(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT Q3Changes FROM PoliciesConfirmed WHERE ConfirmedID = %s"%(self.UserID))
@@ -299,7 +299,7 @@ class Load():
 
     def LoadTimeLagged(self):
 
-        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="Sonal_321",database="economygame")
+        economygamedb = mysql.connector.connect(host="localhost",user="root",passwd="notThePassword_321",database="economygame")
         mycursor = economygamedb.cursor()
 
         mycursor.execute("SELECT TimeLagged FROM PoliciesConfirmed WHERE ConfirmedID = %s"%(self.UserID))
