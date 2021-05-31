@@ -6,6 +6,7 @@ These key principles include how Fiscal, Monetary and Supply Side policies impac
 The objective of this system is to give users, mainly students, the ability to control Government policies
 and more to see how their decisions effect the economy, and overall helping them to grasp a better understanding
 of early Economics.
+The Economics behind the system is supported and has been validated by an Economics teacher.
 
 ## **Basic idea about my implementation**
 The code is in files, named Stage 1 - Stage 4.
